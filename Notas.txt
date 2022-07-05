@@ -1,0 +1,61 @@
+1.- yarn create next-app centinelav2-front-end
+    1.1.- npx create-next-app centinelav2-front-end (tambien se puede crear asi)
+2.- npm install -D tailwindcss postcss autoprefixer
+3.- npx tailwindcss init -p
+4.-     "dev": "next dev -p 5000",
+
+
+5.- Eliminar
+    styles/Home.module.css
+
+6.- Pegar: 
+tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {      
+    },
+  },
+  plugins: [],
+}        
+
+4.- yarn add react-icons 
+5.- yarn add @apollo/client graphql
+
+
+Pegar
+    styles/globals.css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide
+  }
+
+   h1,  h2,  h3,  h4,  h5,  h6 {
+    @apply font-bold
+  }
+
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl
+  }
+
+  button {    
+    @apply shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white
+  } 
+
+}
