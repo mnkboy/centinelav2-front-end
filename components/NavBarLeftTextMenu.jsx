@@ -8,7 +8,7 @@ const NavBarLeftTextMenu = ({setNav}) => {
                 <Link href="/">
                     <li onClick={() => setNav(false)} className="py-4 text-sm cursor-pointer">Home</li>
                 </Link>
-                <Link href="/Personas">
+                <Link href="/#personas">
                     <li onClick={() => setNav(false)} className="py-4 text-sm cursor-pointer">Personas</li>
                 </Link>
                 <Link href="/#about">
