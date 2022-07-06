@@ -11,6 +11,9 @@ const NavBarTextMenu = ({ linkColor, handleNav }) => {
                 <Link href="/">
                     <li className="ml-10 text-sm uppercase hover:border-b cursor-pointer">Home</li>
                 </Link>
+                <Link href="/Personas">
+                    <li className="ml-10 text-sm uppercase hover:border-b cursor-pointer">Personas</li>
+                </Link>
                 <Link href="/#about">
                     <li className="ml-10 text-sm uppercase hover:border-b cursor-pointer">About</li>
                 </Link>
