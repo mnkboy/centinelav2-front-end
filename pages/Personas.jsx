@@ -42,7 +42,7 @@ export async function getStaticProps() {
             query: gql`
             query retrievePerson{
                     retrievePerson(input:{
-                        name:"Javier Armando"
+                        name:""
                     }){
                         id
                         name
