@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Main from "./Main";
-import Movies from "./Movies";
 import { React } from "react";
 import { ApolloClient, InMemoryCache, ApolloProvider,createHttpLink } from "@apollo/client";
 import { setContext } from '@apollo/client/link/context';
@@ -11,7 +10,7 @@ const httpLink = createHttpLink({
 
 const authLink = setContext((_, { headers }) => {
   // get the authentication token from local storage if it exists
-  const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTc0ODI3OTAsImlkIjoiZDQ0M2YwMDMtNGRhNS00NWUyLTliYjItYzdkZWYwNjMxNTA0IiwibmFtZSI6IkFkbWluaXN0cmFkb3IgQmlsbGluZyIsInVzZXJuYW1lIjoiYWRtaW4ifQ.pSTz9PbDFJ7RNl0b7uqArymibF__sBUA9W_9-Rc2toQ';
+  const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTc1NzcwMjgsImlkIjoiZDI5ODA0NWQtMmM2ZC00YmE0LTgyOGQtZTZlYjk3YzRiN2Q1IiwibmFtZSI6IkFkbWluaXN0cmFkb3IgQmlsbGluZyIsInVzZXJuYW1lIjoiYWRtaW4ifQ.ozLaKmZu9Y1VcKT92zI8SpiWSTH-nda2sXQ5BFr2AZo';
   // return the headers to the context so httpLink can read them
   return {
       headers: {
@@ -35,8 +34,7 @@ export default function Home() {
 					<meta name="description" content="Centinel Sofware" />
 					<link rel="icon" href="/favicon.ico" />
 				</Head>
-				<Main />
-				<Movies />
+				<Main />				
 			</ApolloProvider>
 			,
 		</div>
